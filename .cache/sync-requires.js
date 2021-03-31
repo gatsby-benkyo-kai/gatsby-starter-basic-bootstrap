@@ -10,6 +10,7 @@ exports.components = {
   "component---src-pages-about-js": hot(preferDefault(require("/Users/fujishimahiroki/benkyo_space/develop-space/gatsby-starter-basic-bootstrap/src/pages/about.js"))),
   "component---src-pages-contact-js": hot(preferDefault(require("/Users/fujishimahiroki/benkyo_space/develop-space/gatsby-starter-basic-bootstrap/src/pages/contact.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/fujishimahiroki/benkyo_space/develop-space/gatsby-starter-basic-bootstrap/src/pages/index.js"))),
+  "component---src-pages-information-js": hot(preferDefault(require("/Users/fujishimahiroki/benkyo_space/develop-space/gatsby-starter-basic-bootstrap/src/pages/information.js"))),
   "component---src-pages-jigyo-js": hot(preferDefault(require("/Users/fujishimahiroki/benkyo_space/develop-space/gatsby-starter-basic-bootstrap/src/pages/jigyo.js")))
 }
 
