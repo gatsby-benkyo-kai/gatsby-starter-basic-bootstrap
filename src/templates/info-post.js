@@ -4,7 +4,7 @@ import {Col, Row} from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const informationPost = ({data}) => {
+const InformationPost = ({data}) => {
    const post = data.markdownRemark
    return (
        <Layout>
@@ -33,7 +33,7 @@ const informationPost = ({data}) => {
    )
 }
 
-export default informationPost;
+export default InformationPost;
 
 export const query = graphql`
     query($slug: String!){
