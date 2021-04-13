@@ -1,12 +1,12 @@
 import React from "react";
-import {Link, graphql} from "gatsby";
-import {Col, Row, Card} from "react-bootstrap";
+import { Link, graphql } from "gatsby";
+import { Col, Row, Card } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const InformationPage = ({data})=>(
+const InformationPage = ({ data }) => (
     <Layout>
-        <SEO title="インフォメーション"/>
+        <SEO title="インフォメーション" />
         <Row>
             <Col className="space"></Col>
         </Row>
@@ -19,7 +19,7 @@ const InformationPage = ({data})=>(
             <Col className="space"></Col>
         </Row>
         <Row>
-            {data.allMarkdownRemark.edges.map(({node})=>(
+            {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Col xs={12} md={6} key={node.fields.slug}>
                     <Card style={{marginTop:`1rem`}}>
                         <Card.Body>
@@ -45,16 +45,16 @@ const InformationPage = ({data})=>(
 export default InformationPage;
 
 export const query = graphql`
-query MyQuery{
-    allMarkdownRemark(sort:{fields:[frontmatter__date],order:DESC}){
-        edges{
-            node{
-                excerpt(pruneLength:50,truncate:true)
-                frontmatter{
+query {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+        edges {
+            node {
+                excerpt(pruneLength: 50, truncate: true)
+                frontmatter {
                     title
-                    date(formatString:"YYYY年MM月DD日")
+                    date(formatString: "YYYY年MM月DD日")
                 }
-                fields{
+                fields {
                     slug
                 }
             }

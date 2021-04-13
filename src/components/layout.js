@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
@@ -31,7 +24,7 @@ const Layout = ({ children }) => {
         <Container className="p-3">{children}</Container>
       </main>
       <footer className="footer mt-auto py-3 bg-light text-black text-center">
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()},
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>

@@ -1,3 +1,4 @@
+//「5.2.2 スラグを自動作成させる」で書くコード↓
 const {createFilePath} = require(`gatsby-source-filesystem`)
 const path = require(`path`)
 
@@ -13,7 +14,9 @@ exports.onCreateNode = ({node, getNode, actions })=>{
         })
     }
 }
+//ここまで
 
+//「5.3.2 インフォメーション記事詳細」で追記するコード↓
 exports.createPages = ({graphql, actions})=>{
     const{createPage} = actions
     return graphql(
@@ -37,10 +40,10 @@ exports.createPages = ({graphql, actions})=>{
 
         result.data.allMarkdownRemark.edges.forEach(({node})=>{
             createPage({
-                path:node.fields.slug,
-                component:path.resolve(`./src/templates/info-post.js`),
-                context:{
-                    slug:node.fields.slug
+                path: node.fields.slug,
+                component: path.resolve(`./src/templates/info-post.js`),
+                context: {
+                    slug: node.fields.slug
                 }
             })
         })
