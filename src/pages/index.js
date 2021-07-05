@@ -2,8 +2,8 @@ import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Link } from "gatsby";
-import image from "../components/image"
+import { Link } from "gatsby"; // eslint-disable-line
+import image from "../components/image" // eslint-disable-line
 import homeImg from "../images/home.jpg"
 import jigyo1Img from "../images/jigyo1.jpg"
 import jigyo2Img from "../images/jigyo2.jpg"

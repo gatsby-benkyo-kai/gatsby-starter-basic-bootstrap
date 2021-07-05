@@ -39,10 +39,10 @@ module.exports = {
         ],
       },
     },
-    //`gatsby-transformer-sharp`,
+    `gatsby-transformer-sharp`,
 
     //Gatsby上で画像を取り扱うプラグイン
-    //`gatsby-plugin-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
