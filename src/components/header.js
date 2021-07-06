@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-import { Button, Navbar, Nav, NavItem } from "react-bootstrap";
+import { Navbar, Nav, NavItem } from "react-bootstrap";
 
 const Header = ({ siteTitle }) => (
   <Navbar bg="light" variant="light" expand="lg">
@@ -13,14 +13,24 @@ const Header = ({ siteTitle }) => (
       <Nav className="mr-auto">
         <NavItem href="/about">
           <Nav.Link as={Link} activeClassName="active" to="/about">
-            About
+            会社概要
           </Nav.Link>
         </NavItem>
-      </Nav>
-      <Nav className="ml-auto">
-        <Button variant="success" onClick={() => alert("Sign Up")}>
-          Sign Up
-        </Button>
+        <NavItem href="/about">
+          <Nav.Link as={Link} activeClassName="active" to="/jigyo">
+            事業内容
+          </Nav.Link>
+        </NavItem>
+        <NavItem href="/about">
+          <Nav.Link as={Link} activeClassName="active" to="/information">
+            インフォメーション
+          </Nav.Link>
+        </NavItem>
+        <NavItem href="/about">
+          <Nav.Link as={Link} activeClassName="active" to="/contact">
+            お問い合わせ
+          </Nav.Link>
+        </NavItem>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
