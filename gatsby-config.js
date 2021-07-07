@@ -5,15 +5,43 @@ module.exports = {
     author: `@mik3y`,
   },
   plugins: [
+    //metaタグの設定
     `gatsby-plugin-react-helmet`,
     {
+      //resolve:使用するプラグイン名の指定
+      //gatsby-source-filesystem:ローカルのファイルシステムと、gatsbyをつなぐインターフェイスになるようなプラグイン
+      //name:識別用の名前
+      //path:データソースの場所を指定
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
+        //imagesフォルダ
         path: `${__dirname}/src/images`,
+      },
+      options:{
+        name:`information`,
+        //informationフォルダ
+        path:`${__dirname}/src/content/information`,
+      },
+    },
+    {
+      //gatsby-transformer-remark:あるデータを別のデータに変換するためのプラグイン
+      resolve:`gatsby-transformer-remark`,
+      options:{
+        plugins:[
+          {
+            //Gatsby上で画像を取り扱うプラグイン
+            resolve:`gatsby-remark-images`,
+            options:{
+              maxWidth:590,
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,
+
+    //Gatsby上で画像を取り扱うプラグイン
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -33,9 +61,6 @@ module.exports = {
         includePaths: [require("path").resolve(__dirname, "node_modules")],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
   pathPrefix: "gatsby-starter-basic-bootstrap",
 };
