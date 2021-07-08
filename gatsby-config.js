@@ -24,6 +24,7 @@ module.exports = {
         path:`${__dirname}/src/content/information`,
       },
     },
+    
     {
       //gatsby-transformer-remark:あるデータを別のデータに変換するためのプラグイン
       resolve:`gatsby-transformer-remark`,
@@ -40,6 +41,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-material-ui`,
 
     //Gatsby上で画像を取り扱うプラグイン
     `gatsby-plugin-sharp`,

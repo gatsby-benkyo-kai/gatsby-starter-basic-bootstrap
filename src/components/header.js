@@ -38,6 +38,7 @@ const Header = ({ siteTitle }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  //PropTypesを用いた型チェック(prop-typesライブラリ)、バリデーション
 };
 
 Header.defaultProps = {
